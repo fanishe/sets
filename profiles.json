@@ -1,0 +1,170 @@
+
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "copyOnSelect": true,
+    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+
+    "profiles":
+    [
+        
+        {
+            // CMD
+            "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+            "name": "cmd",
+            "commandline": "cmd.exe /k D:\\Resilio_Sync\\Py_Bot\\wt\\doskey.bat",
+            "startingDirectory" : ".",
+            "colorScheme" : "Subliminal",
+            "fontSize" : 12,
+            "cursorShape" : "bar",
+            "hidden": false
+        },
+        {
+            // Git Bash
+            "guid": "{00000000-0000-0000-ba54-000000000002}",
+            "closeOnExit" : true,
+            "suppressApplicationTitle": true,
+            "commandline" : "C:/Program Files/Git/bin/bash.exe --login",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "bar",
+            "fontSize" : 12,
+            "historySize" : 9001,
+            "icon" : "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+            "name" : "Git Bash",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%/Documents/GitHub/flask"
+
+        },
+        {
+            // Ubuntu
+            "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+            "startingDirectory" : "//wsl$/Ubuntu-18.04/home/fantomas",
+            "hidden": false,
+            "name": "Ubuntu-18.04",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            // python
+            "closeOnExit" : true,
+            "colorScheme" : "Subliminal",
+            "tabTitle": "Py",
+            "commandline" : "python.exe",
+            "fontSize" : 12,
+            "guid" : "{9acb9455-ca41-5af7-950f-6bca1bc9722f}",
+            "historySize" : 9001,
+            "icon" : "D:/icon-pac/python.ico",
+            "name" : "Python",
+            "snapOnInput" : true
+        },
+        {
+            //  powershell
+            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "name": "Windows PowerShell",
+            "commandline": "powershell.exe",
+            "hidden": true
+        },
+        {
+            // Azure
+            "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+            "hidden": true,
+            "name": "Azure Cloud Shell",
+            "source": "Windows.Terminal.Azure"
+        }
+    ],
+
+    // Add custom color schemes to this array
+    "schemes": [
+        {
+            "name": "Batman",
+            "black": "#1b1d1e",
+            "red": "#e6dc44",
+            "green": "#c8be46",
+            "yellow": "#f4fd22",
+            "blue": "#737174",
+            "purple": "#747271",
+            "cyan": "#62605f",
+            "white": "#c6c5bf",
+            "brightBlack": "#505354",
+            "brightRed": "#fff78e",
+            "brightGreen": "#fff27d",
+            "brightYellow": "#feed6c",
+            "brightBlue": "#919495",
+            "brightPurple": "#9a9a9d",
+            "brightCyan": "#a3a3a6",
+            "brightWhite": "#dadbd6",
+            "background": "#1b1d1e",
+            "foreground": "#6f6f6f"
+          },
+          {
+            "name": "Spiderman",
+            "black": "#1b1d1e",
+            "red": "#e60813",
+            "green": "#e22928",
+            "yellow": "#e24756",
+            "blue": "#2c3fff",
+            "purple": "#2435db",
+            "cyan": "#3256ff",
+            "white": "#fffef6",
+            "brightBlack": "#505354",
+            "brightRed": "#ff0325",
+            "brightGreen": "#ff3338",
+            "brightYellow": "#fe3a35",
+            "brightBlue": "#1d50ff",
+            "brightPurple": "#747cff",
+            "brightCyan": "#6184ff",
+            "brightWhite": "#fffff9",
+            "background": "#1b1d1e",
+            "foreground": "#e3e3e3"
+          },
+          {
+            "name": "Subliminal",
+            "black": "#7f7f7f",
+            "red": "#e15a60",
+            "green": "#a9cfa4",
+            "yellow": "#ffe2a9",
+            "blue": "#6699cc",
+            "purple": "#f1a5ab",
+            "cyan": "#5fb3b3",
+            "white": "#d4d4d4",
+            "brightBlack": "#7f7f7f",
+            "brightRed": "#e15a60",
+            "brightGreen": "#a9cfa4",
+            "brightYellow": "#ffe2a9",
+            "brightBlue": "#6699cc",
+            "brightPurple": "#f1a5ab",
+            "brightCyan": "#5fb3b3",
+            "brightWhite": "#d4d4d4",
+            "background": "#282c35",
+            "foreground": "#d4d4d4"
+          }
+    ],
+
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": [
+        {
+            "command": "closeTab",
+            "keys": ["ctrl+w"]
+            },
+            {
+                "command": "newTab",
+                "keys": ["ctrl+t"]
+            },
+            {
+                "command":"newTabProfile1",
+                "keys": ["ctrl+g"]
+            },
+            {
+                "command":"newTabProfile2",
+                "keys": ["ctrl+u"]
+    
+            },
+            {
+                "command":"newTabProfile3",
+                "keys": ["ctrl+p"]
+            }
+    ]
+}
