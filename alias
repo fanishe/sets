@@ -1,0 +1,28 @@
+# ======= My aliases =========
+#== general ===
+alias q='exit'
+alias adal='vim ~/.zshrc'
+alias refal='source ~/.zshrc'
+alias c='clear'
+alias ls='ls -a'
+alias updg='apt-get update && apt-get upgrade -y'                                                                                                                                                     #===== django ====
+alias migrate='python manage.py migrate'
+alias godj='cd /storage/emulated/0/Download/Sync/py_Bot/Django'
+alias webbot='cd /storage/emulated/0/Download/Sync/py_Bot/Django/webbot/webbot'
+alias djgirls='cd /storage/emulated/0/Download/Sync/py_Bot/Django/djangogirls'
+alias runs='python manage.py runserver'
+
+#==== git ====
+alias mygit='cd storage/downloads/git/'
+alias evalserver='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/server2_rsa'
+alias evalgit='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/git_rsa'
+#==== flask ====
+alias myflask='cd storage/downloads/git/flask/microblog'
+alias venv='source venv/bin/activate'
+alias out='deactivate'
+alias req='pip install -r /storage/emulated/0/Download/git/flask/requirements.txt'
+alias setflask='export FLASK_APP=microblog.py'
+alias run='flask run'
+
+#=== server ===
+alias fddns='ssh -p 40408 fantomas@fantomas.ddns.net'
