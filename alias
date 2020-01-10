@@ -5,7 +5,9 @@ alias adal='vim ~/.zshrc'
 alias refal='source ~/.zshrc'
 alias c='clear'
 alias ls='ls -a'
-alias updg='apt-get update && apt-get upgrade -y'                                                                                                                                                     #===== django ====
+alias updg='apt-get update && apt-get upgrade -y'
+
+#===== django ====
 alias migrate='python manage.py migrate'
 alias godj='cd /storage/emulated/0/Download/Sync/py_Bot/Django'
 alias webbot='cd /storage/emulated/0/Download/Sync/py_Bot/Django/webbot/webbot'
@@ -23,6 +25,7 @@ alias out='deactivate'
 alias req='pip install -r /storage/emulated/0/Download/git/flask/requirements.txt'
 alias setflask='export FLASK_APP=microblog.py'
 alias run='flask run'
+alias bot='cd storage/downloads/git/bot'
 
 #=== server ===
 alias fddns='ssh -p 40408 fantomas@fantomas.ddns.net'
