@@ -16,3 +16,8 @@ git config --global user.email fanishe
 
 ssh-keygen -t rsa -b 4096 -C "fan.42@mail.ru" -f ~/$newdir/git_rsa
 eval "$(ssh-agent -s)
+ssh-add ~/.ssh/git_rsa
+
+echo "<=== KEY FOR GitHub ===>"
+cat git_rsa.pub
+
