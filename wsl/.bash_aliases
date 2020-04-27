@@ -14,5 +14,5 @@ alias venv='source /mnt/c/Users/PC/Documents/GitHub/flask/microblog/venv/bin    
 alias out='deactivate'
 alias bot='cd /mnt/c/Users/PC/Documents/GitHub/bot'
 alias desctop='cd /mnt/c/Users/PC/Desktop'
-alias ls='ls -a'
+alias ls='ls -a --color=auto'
 alias aws='ssh -i ~/.ssh/"aws_webserver_frankfurt.pem" ubuntu@ec2-3-120-204-255.eu-central-1.compute.amazonaws.com'
