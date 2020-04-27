@@ -3,19 +3,19 @@
 newdir=.ssh
 
 if [ -d ~/$newdir ]; then
-    echo "Directory $newdir exist"
+    echo "DIRECTORY $newdir EXISTS"
 else 
-    echo "Create $newdir"
+    echo "CREATED $newdir"
     mkdir ~/$newdir
     cd ~/$newdir
 fi
 
-echo "Make configs for git"
+echo "MAKE CONFIGS FOR GIT"
 git config --global user.email fan.42@mail.ru
 git config --global user.name fanishe
 
 if [ -f ~/$newdir/git_rsa ]; then
-    echo "git_rsa created"
+    echo "=== GIT EXISTS ==="
 else 
     ssh-keygen -t rsa -b 4096 -C "fan.42@mail.ru" -f ~/$newdir/git_rsa
 fi
