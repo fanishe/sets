@@ -1,21 +1,30 @@
 #!/bin/bash
 # Creates ssh-connection for git
+
+# Colors for console
+# https://m.habr.com/ru/post/119436/
+
 newdir=.ssh
+RED='\033[0;31m'         #  ${RED}
+GREEN='\033[0;32m'      #  ${GREEN}
+NORMAL='\033[0m'      #  ${NORMAL}
+YELLOW='\033[0;33m'     #  ${YELLOW}
 
 if [ -d ~/$newdir ]; then
-    echo "DIRECTORY $newdir EXISTS"
+    echo -e "${RED} DIRECTORY $newdir EXISTS${NORMAL}"
 else 
-    echo "CREATED $newdir"
+    echo "${GREEN}CREATED $newdir${NORMAL}"
     mkdir ~/$newdir
     cd ~/$newdir
 fi
 
-echo "MAKE CONFIGS FOR GIT"
+echo -e "${YELLOW}MAKE CONFIGS FOR GIT${NORMAL}"
 git config --global user.email fan.42@mail.ru
 git config --global user.name fanishe
+cat ~/.gitconfig
 
 if [ -f ~/$newdir/git_rsa ]; then
-    echo "=== GIT EXISTS ==="
+    echo -e "${RED}=== GIT EXISTS ===${NORMAL}"
 else 
     ssh-keygen -t rsa -b 4096 -C "fan.42@mail.ru" -f ~/$newdir/git_rsa
 fi
@@ -23,6 +32,6 @@ fi
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/git_rsa
 
-echo "<=== KEY FOR GitHub ===>"
+echo -e "${YELLOW}<=== KEY FOR GitHub ===>${NORMAL}"
 cat ~/$newdir/git_rsa.pub
 
