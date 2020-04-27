@@ -18,6 +18,7 @@ if [ -f ~/$newdir/git_rsa ]; then
     echo "git_rsa created"
 else 
     ssh-keygen -t rsa -b 4096 -C "fan.42@mail.ru" -f ~/$newdir/git_rsa
+fi
 
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/git_rsa
