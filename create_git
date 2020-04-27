@@ -14,7 +14,11 @@ echo "Make configs for git"
 git config --global user.email fan.42@mail.ru
 git config --global user.name fanishe
 
-ssh-keygen -t rsa -b 4096 -C "fan.42@mail.ru" -f ~/$newdir/git_rsa
+if [ -f ~/$newdir/git_rsa ]; then
+    echo "git_rsa created"
+else 
+    ssh-keygen -t rsa -b 4096 -C "fan.42@mail.ru" -f ~/$newdir/git_rsa
+
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/git_rsa
 
