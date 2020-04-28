@@ -1,0 +1,10 @@
+#/!bin/bash
+#create virtualenv
+
+echo "venv/*" > .gitignore
+virtualenv venv
+
+source venv/bin/activate
+pip install $package
+deactivate
+
