@@ -5,7 +5,13 @@ echo "venv/*" > .gitignore
 virtualenv venv
 
 source venv/bin/activate
-pip install $package
+
+for param in "$@"
+do 
+    echo "pip install $param"
+    pip install $package
+done
+
 deactivate
 
 

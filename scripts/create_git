@@ -24,7 +24,7 @@ git config --global user.name fanishe
 cat ~/.gitconfig
 
 if [ -f ~/$newdir/git_rsa ]; then
-    echo -e "${RED}=== GIT EXISTS ===${NORMAL}"
+    echo -e "${RED}=== git_rsa EXISTS ===${NORMAL}"
 else 
     ssh-keygen -t rsa -b 4096 -C "fan.42@mail.ru" -f ~/$newdir/git_rsa
 fi
