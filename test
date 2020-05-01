@@ -1,3 +1,0 @@
-#!/bin/bash
-
-echo my comp is $'uname -n'
