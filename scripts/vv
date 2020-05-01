@@ -6,11 +6,15 @@ virtualenv venv
 
 source venv/bin/activate
 
-for param in "$@"
-do 
-    echo "pip install $param"
-    pip install $package
-done
+if [-f 'requirements.txt'];then
+    pip install -r requirements.txt
+fi
+#else
+#    for param in "$@"
+#        do 
+#        echo "pip install $param"
+#        pip install $package
+#    done
 
 deactivate
 
