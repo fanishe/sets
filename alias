@@ -6,26 +6,21 @@ alias refal='source ~/.zshrc'
 alias c='clear'
 alias ls='ls -a'
 alias updg='apt-get update && apt-get upgrade -y'
+alias venv='source venv/bin/activate'
+alias out='deactivate'
 
-#===== django ====
-alias migrate='python manage.py migrate'
-alias godj='cd /storage/emulated/0/Download/Sync/py_Bot/Django'
-alias webbot='cd /storage/emulated/0/Download/Sync/py_Bot/Django/webbot/webbot'
-alias djgirls='cd /storage/emulated/0/Download/Sync/py_Bot/Django/djangogirls'
-alias runs='python manage.py runserver'
 
 #==== git ====
 alias mygit='cd storage/downloads/git/'
 alias evalserver='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/server2_rsa'
 alias evalgit='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/git_rsa'
 #==== flask ====
-alias myflask='cd storage/downloads/git/flask/microblog'
-alias venv='source venv/bin/activate'
-alias out='deactivate'
 alias req='pip install -r /storage/emulated/0/Download/git/flask/requirements.txt'
 alias setflask='export FLASK_APP=microblog.py'
 alias run='flask run'
 alias bot='cd storage/downloads/git/bot'
 
 #=== server ===
-alias fddns='ssh -p 40408 fantomas@fantomas.ddns.net'
+alias fddns='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/server_rsa && ssh -p 40408 fantomas@fantomas.ddns.net'
+alias dev='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/dev_rsa && ssh developer@192.168.11.132 -p 22'
+alias aws='ssh -i ~/.ssh/"aws_webserver_frankfurt.pem" ubuntu@ec2-3-120-204-255.eu-central-1.compute.amazonaws.com'
